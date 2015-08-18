@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Cloveretl-announce] Released Clover.ETL version 2.4
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/cloveretl-announce/2008q1/index.html" >
+   <LINK REL="made" HREF="mailto:cloveretl-announce%40lists.berlios.de?Subject=Re%3A%20%5BCloveretl-announce%5D%20Released%20Clover.ETL%20version%202.4&In-Reply-To=%3C47BD538E.6010100%40centrum.cz%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000007.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Cloveretl-announce] Released Clover.ETL version 2.4</H1>
+    <B>cloveretl-announce at lists.berlios.de</B> 
+    <A HREF="mailto:cloveretl-announce%40lists.berlios.de?Subject=Re%3A%20%5BCloveretl-announce%5D%20Released%20Clover.ETL%20version%202.4&In-Reply-To=%3C47BD538E.6010100%40centrum.cz%3E"
+       TITLE="[Cloveretl-announce] Released Clover.ETL version 2.4">cloveretl-announce at lists.berlios.de
+       </A><BR>
+    <I>Thu Feb 21 11:33:50 CET 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000007.html">[Cloveretl-announce] New CloverETL release 2.3.4
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#8">[ date ]</a>
+              <a href="thread.html#8">[ thread ]</a>
+              <a href="subject.html#8">[ subject ]</a>
+              <a href="author.html#8">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>New version (2.4) of Clover.ETL engine has been released. It brings many 
+improvements in graph execution, database communication and also 
+extensions of Clover Transformation Language (CTL)
+
+Most notably, we have introduced new graph execution management which 
+allows us to run several transformation graphs within the same JVM 
+instance at the same time. Also, it is possible to limit the amount of 
+CPU resources (threads) used by Clover during graph's runtime. Other 
+interesting extension is ability to run transformations in transaction 
+mode - transformation graph can be re-set to its original state - that 
+allows processing of data in small chunks - similarly to database 
+&quot;triggers&quot;.
+List of other (smaller) improvements:
+
+    * sftp protocol support for readers which use multifile reader
+    * possibility of copying ByteDataField as BLOB
+    * new implementation of &quot;partition by range&quot; feature with range 
+lookup table usage
+    * field unquoting before setting value by delimited and universal 
+data parsers
+    * the set of available functions in the Clover transformation 
+language was extended by more than 20 new functions
+    * Clover transformation language supports two new variable types, 
+byte array and record
+    * some components have new optional &quot;rejected&quot; port(s) 
+(AproxMergeJoin, CheckForeignKey, DBJoin, LookupJoin)
+    * DBOutputTable accepts more queries at once; new jetel-sql query 
+syntax introduced
+    * DBOutputTable has new attribute &quot;errorAction&quot; - COMMIT or ROLLBACK 
+on errors
+    * StructureWriter has 3 input ports: &quot;body&quot;, &quot;header&quot; and &quot;footer&quot;. 
+There can be different masks for each input port
+    * all component attributes, which contain a java code or a Clover TL 
+language code, are not resolved for special characters
+    * new graph processing facility - GraphExecutor, GraphPool
+    * new component XmlWriter with example graphXmlWriter.grf
+    * new component SpeedLimiter
+    * XLSWriter can write to different sheets depending on record's value
+    * data record metadata can specify a default field delimiter
+    * the DataReader component recognizes too few or too many fields per 
+record
+    * the DataReader component has extended error port metadata - field 
+number where an error occurs is attached
+    * new JavaExecute component
+    * new component attribute type - properties
+    * ascending/descending flag in sort component can be specified per 
+each key field
+
+
+David Pavlis
+Clover.ETL team
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000007.html">[Cloveretl-announce] New CloverETL release 2.3.4
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#8">[ date ]</a>
+              <a href="thread.html#8">[ thread ]</a>
+              <a href="subject.html#8">[ subject ]</a>
+              <a href="author.html#8">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/cloveretl-announce">More information about the Cloveretl-announce
+mailing list</a><br>
+</body></html>

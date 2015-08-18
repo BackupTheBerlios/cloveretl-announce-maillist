@@ -1,0 +1,107 @@
+From cloveretl-announce at lists.berlios.de  Mon Feb  4 10:13:43 2008
+From: cloveretl-announce at lists.berlios.de (cloveretl-announce at lists.berlios.de)
+Date: Mon, 04 Feb 2008 10:13:43 +0100
+Subject: [Cloveretl-announce] New CloverETL release 2.3.4
+Message-ID: <47A6D747.6050904@centrum.cz>
+
+Dear members of CloverETL  announce list !
+
+We would like to announce that Clover team has recently released
+version 2.3.4 of Clover.ETL tool.
+We apologize for delay of this message.
+
+The 2.3.4 release is mostly maintenance release with fixes of reported
+bugs. However, the 2.3.x branch in general brings following improvements:
+
++ new extension point for build-in JDBC drivers - a JDBC connection now can be defined also via
+	identifier of a build-in JDBC driver instead direct parameters 'dbDriver' and 'driverLibrary'
++ new engine plugin - 'org.jetel.jdbc', which now contains only MySQL build-in JDBC driver
++ the Dedup compoment has new rejected port, where all duplicated records are resent
++ the set of available functions in the Clover transformation language was extended
+	- is_blank()
+	- is_ascii()
+	- is_number()
+	- is_integer()
+	- is_date()
+	- remove_diacritic()
++ the javolution library was updated to the version 5.1
++ the commons-logging library was updated to the version 1.1
++ the DBLookupTable has new parameter "storeNulls", which determines whether the internal cache will
+	store also a 'null' database response
++ method DataField.copyFrom() is now deprecated - developers should use setValue(DataField) instead
++ added new component "DB2 Data Writer" - DB2 bulk loader
++ added new component "Informix Data Writer" - Informix bulk loader
++ added new component "MSSQL Data Writer" - SQL Server bulk loader
++ most of the readers are able to read direct from STDIN - use '-' character in fileURL parameter for this purpose
++ most of the writers are able to write direct to STDOUT - use '-' character in fileURL parameter for this purpose
++ usage of the 'Check foreign key' component was slightly changed - check documentation
+
+
+With my best regards !
+
+David Pavlis
+Clover development
+team
+
+
+
+
+From cloveretl-announce at lists.berlios.de  Thu Feb 21 11:33:50 2008
+From: cloveretl-announce at lists.berlios.de (cloveretl-announce at lists.berlios.de)
+Date: Thu, 21 Feb 2008 11:33:50 +0100
+Subject: [Cloveretl-announce] Released Clover.ETL version 2.4
+Message-ID: <47BD538E.6010100@centrum.cz>
+
+New version (2.4) of Clover.ETL engine has been released. It brings many 
+improvements in graph execution, database communication and also 
+extensions of Clover Transformation Language (CTL)
+
+Most notably, we have introduced new graph execution management which 
+allows us to run several transformation graphs within the same JVM 
+instance at the same time. Also, it is possible to limit the amount of 
+CPU resources (threads) used by Clover during graph's runtime. Other 
+interesting extension is ability to run transformations in transaction 
+mode - transformation graph can be re-set to its original state - that 
+allows processing of data in small chunks - similarly to database 
+"triggers".
+List of other (smaller) improvements:
+
+    * sftp protocol support for readers which use multifile reader
+    * possibility of copying ByteDataField as BLOB
+    * new implementation of "partition by range" feature with range 
+lookup table usage
+    * field unquoting before setting value by delimited and universal 
+data parsers
+    * the set of available functions in the Clover transformation 
+language was extended by more than 20 new functions
+    * Clover transformation language supports two new variable types, 
+byte array and record
+    * some components have new optional "rejected" port(s) 
+(AproxMergeJoin, CheckForeignKey, DBJoin, LookupJoin)
+    * DBOutputTable accepts more queries at once; new jetel-sql query 
+syntax introduced
+    * DBOutputTable has new attribute "errorAction" - COMMIT or ROLLBACK 
+on errors
+    * StructureWriter has 3 input ports: "body", "header" and "footer". 
+There can be different masks for each input port
+    * all component attributes, which contain a java code or a Clover TL 
+language code, are not resolved for special characters
+    * new graph processing facility - GraphExecutor, GraphPool
+    * new component XmlWriter with example graphXmlWriter.grf
+    * new component SpeedLimiter
+    * XLSWriter can write to different sheets depending on record's value
+    * data record metadata can specify a default field delimiter
+    * the DataReader component recognizes too few or too many fields per 
+record
+    * the DataReader component has extended error port metadata - field 
+number where an error occurs is attached
+    * new JavaExecute component
+    * new component attribute type - properties
+    * ascending/descending flag in sort component can be specified per 
+each key field
+
+
+David Pavlis
+Clover.ETL team
+
+

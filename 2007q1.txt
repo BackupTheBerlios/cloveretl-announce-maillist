@@ -1,0 +1,174 @@
+From cloveretl-announce at lists.berlios.de  Fri Jan 12 10:04:27 2007
+From: cloveretl-announce at lists.berlios.de (cloveretl-announce at lists.berlios.de)
+Date: Fri, 12 Jan 2007 10:04:27 +0100
+Subject: [Cloveretl-announce] New CloverETL release (2.0.3) and berlios.de
+	server outage
+Message-ID: <45A74F1B.6020304@centrum.cz>
+
+Dear CloverETL users !
+
+We have released yet another CloverETL 2.0 version - 2.0.3, which fixes
+some small issues and
+brings back some API calls which were lost during transition from 1.x
+version to 2.x
+
+Also, due to frequent outages of project's main hosting facility
+berlios.de (which is unfortunately out of our reach)
+we have set up an alternate  host - http://www.cloveretl.org/
+
+Please, use this URL for accessing CloverETL site now on. We will make
+sure that when berlios.de is back on-line,
+this url will be redirected to the "original" site cloveretl.berlios.de
+
+
+David Pavlis
+CloverETL team
+
+
+From cloveretl-announce at lists.berlios.de  Thu Feb  1 19:46:09 2007
+From: cloveretl-announce at lists.berlios.de (cloveretl-announce at lists.berlios.de)
+Date: Thu, 01 Feb 2007 19:46:09 +0100
+Subject: [Cloveretl-announce] CloverETL release 2.0.4
+Message-ID: <45C23571.8030409@centrum.cz>
+
+Dear CloverETL user !
+
+CloverETL version 2.0.4 has been released. It contains mostly
+fixes of reported/discovered bugs.
+
+You may download it from its distribution site:
+https://developer.berlios.de/project/showfiles.php?group_id=618
+
+David Pavlis
+CloverETL team
+
+
+From cloveretl-announce at lists.berlios.de  Sun Feb 18 11:04:15 2007
+From: cloveretl-announce at lists.berlios.de (cloveretl-announce at lists.berlios.de)
+Date: Sun, 18 Feb 2007 11:04:15 +0100
+Subject: [Cloveretl-announce] CloverETL 2.1.0 released
+Message-ID: <45D8249F.3080702@centrum.cz>
+
+Dear CloverETL user !
+
+CloverETL version 2.1.0 has arrived and brings many new features.
+
+This release brings updates to architecture of transformation 
+components.It allows checking of graph
+configuration before run-time.
+We have also added support for JMX which allows gathering of 
+system-level statistics about run time
+(component's CPU usage, various averages). These statistics can be 
+displayed by any JMX client.
+By reimplementing text data parsers, we achieved between 15-30% faster 
+processing (depends on type of data).
+
+Following is a list of significant changes:
+
++ Added new component "Data Generator" - generator of synthetic/random data
++ Added new component "Lookup Table Reader/Writer" - reader/writer of records from/to lookup table
++ Added new component "Lookup Join" - joins incoming data with selected lookup table
++ Added new component "JMS Reader" - receives JMS-messages
++ Added new component "JMS Writer" - sends JMS-messages
++ Added new component "Normalizer" - normalizes input records
++ Added new component "Denormalizer" - denormalizes input records
++ Added new component "Structure writer" - record mask formatter
++ Added new connection "JMS connection" - connection related with JSMReader and JMSWriter
++ developers can use new method for engine initialization - runGraph.initEngine()
++ new approach in DataField.setToDefaultValue() method;
+  in case the default value is not preset, engine tries to set the field value to null
++ DBConnection has new calling method order;
+  new DBConnection(), init(), getConnection()/getStatement(), free() 
+  (connect() method is now private - call init() method instead)
++ Extended LookupTable interface by put() and remove() methods
++ all GraphElement(s) should implement checkConfig() method; this method is used for
+  checking engine element configuration; related changes of transformation graph startup
+  are described in runGraph class comments
++ components (Node descendants) should not override direct run() method, instead 
+  for this purpose was introduced new execute() method
++ WatchDog thread has new wide logging and inter-component communication facilities
++ Added new data field type cbyte (compressed byte array)
++ All join components are ready to satisfy more slave input data streams
+
+
+The CloverETL download is available from usual location: www.cloveretl.org or cloveretl.berlios.de
+
+
+David Pavlis
+CloverETL team
+
+
+From cloveretl-announce at lists.berlios.de  Fri Mar 23 10:57:24 2007
+From: cloveretl-announce at lists.berlios.de (cloveretl-announce at lists.berlios.de)
+Date: Fri, 23 Mar 2007 10:57:24 +0100
+Subject: [Cloveretl-announce] CloverETL - new - release 2.1.1 - wiki -
+	project repository
+Message-ID: <4603A484.90808@centrum.cz>
+
+Dear CloverETL user !
+
+We would like to inform you  about new development in CloverETL project:
+* CloverETL maintenance release 2.1.1
+* CloverETL/GUI Wiki has been launched
+* CloverETL Project Repository started
+
+CloverETL release 2.1.1
+=================
+This is a maintenance release to 2.1.0. Please
+see release notes on 
+https://developer.berlios.de/project/shownotes.php?release_id=12500
+
+CloverETL/GUI Wiki
+=================
+We have started a new documentation project
+focused on both CloverETL/GUI users and developers.
+It has a popular wiki form which allows anybody to participate
+on updating and enhancing documentation.
+
+CloverETL/GUI Wiki is accessible on http://www.clovergui.net/wiki/doku.php
+
+CloverETL Project Repository
+=====================
+This  repository is a list of projects using CloverETL engine and 
+CloverGUI. Its primary
+purpose is to share information about Clover deployment in various 
+environments.
+Repository is accessible on http://www.clovergui.net/projects.php
+
+If you are using CloverETL/GUI in your project, please share the 
+information about it with others.
+We have started this repository with a hope that it will help the whole 
+community of users around CloverETL
+family of tools.
+
+We prepared small incentives for those who decide to share their 
+experience with others.
+First 15 registered (and approved) projects will be awarded with 
+beautiful gifts that are depicted on repository
+pages.
+
+
+With my best regards,
+
+David Pavlis
+CloverETL team
+
+
+From cloveretl-announce at lists.berlios.de  Wed Mar 28 15:42:42 2007
+From: cloveretl-announce at lists.berlios.de (cloveretl-announce at lists.berlios.de)
+Date: Wed, 28 Mar 2007 15:42:42 +0200
+Subject: [Cloveretl-announce] CloverETL examples 2.1.1 released
+Message-ID: <460A70D2.5000606@centrum.cz>
+
+Dear CloverETL user !
+
+We have released updated CloverETL examples package - version 2.1.1.
+Several example graphs were fixed to comply with 2.1.1 Clover engine.
+
+You may download the package from: 
+http://developer.berlios.de/projects/cloveretl/
+
+David Pavlis
+CloverETL team
+
+

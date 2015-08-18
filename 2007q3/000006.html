@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Cloveretl-announce] New CloverETL release 2.2
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/cloveretl-announce/2007q3/index.html" >
+   <LINK REL="made" HREF="mailto:cloveretl-announce%40lists.berlios.de?Subject=Re%3A%20%5BCloveretl-announce%5D%20New%20CloverETL%20release%202.2&In-Reply-To=%3C46A70848.2050407%40centrum.cz%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Cloveretl-announce] New CloverETL release 2.2</H1>
+    <B>cloveretl-announce at lists.berlios.de</B> 
+    <A HREF="mailto:cloveretl-announce%40lists.berlios.de?Subject=Re%3A%20%5BCloveretl-announce%5D%20New%20CloverETL%20release%202.2&In-Reply-To=%3C46A70848.2050407%40centrum.cz%3E"
+       TITLE="[Cloveretl-announce] New CloverETL release 2.2">cloveretl-announce at lists.berlios.de
+       </A><BR>
+    <I>Wed Jul 25 10:22:32 CEST 2007</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#6">[ date ]</a>
+              <a href="thread.html#6">[ thread ]</a>
+              <a href="subject.html#6">[ subject ]</a>
+              <a href="author.html#6">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear CloverETL user !
+
+We are happy to announce that new version (2.2) of CloverETL tool has 
+been released.
+It may be downloaded from its web portal [www.cloveretl.org]. We would also
+like to remind you, that three other Clover related WEB sites are available:
+
+<A HREF="http://wiki.cloveretl.org/">http://wiki.cloveretl.org/</A>   - Wiki - primary source of Clover documentation
+<A HREF="http://forum.cloveretl.org/">http://forum.cloveretl.org/</A> - with Clover related discussion groups 
+(replacing the old ones on berlios.de site)
+<A HREF="http://bug.cloveretl.org/">http://bug.cloveretl.org/</A>   - where you may report bugs or submit 
+feature requests
+
+These are the most important changes/improvements in 2.2 version of Clover:
+
++ all read/write components have an uniform set of available attributes
+    (i.e. dataPolicy, skipFirstLine, skipRows, numRecords, ...)
++ The examples package - example graphs are now distributed as an 'easy 
+to use' eclipse project
++ engine binary release has this slightly different directory structure
+    - [cloverETL]
+    - [bin] run scripts
+    - [docs] documentation, licenses
+    - [lib] clover engine and other dependent libraries
+    - [plugins] clover engine plugins
++ new shell/bat scripts for easy clover execution are present in the 
+[bin] directory
++ the documentation was moved to wiki page [wiki.cloveretl.org]
++ new implementation of Aggregate component
++ new range lookup table was added to the lookup engine plugin
++ the DBOutputTable component now supports new output port for 
+auto-generated keys from database;
+   only MySQL and Oracle databases are currently supported
++ new XML reader based on xPath XML technology was added - XPathReader
++ the clover engine plugin framework was extended by new extension point 
+for Transformation Language (TL) functions
+   - most of the TL functions were externalized to the new engine plugin 
+tlfunction
++ the field metadata has new attribute &quot;auto_filling&quot; - several 
+auto-filled fields are now recognized - (source_name, source_timestamp, 
+global_row_count, ...)
++ the clover transformation language increases usability - supports 
+sequences, lookup tables, lists, maps and introduces many new functions, 
+it also allows
+   inclusion of external source files through &quot;import&quot; keyword.
+
+
+Happy using !
+
+CloverETL team
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#6">[ date ]</a>
+              <a href="thread.html#6">[ thread ]</a>
+              <a href="subject.html#6">[ subject ]</a>
+              <a href="author.html#6">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/cloveretl-announce">More information about the Cloveretl-announce
+mailing list</a><br>
+</body></html>

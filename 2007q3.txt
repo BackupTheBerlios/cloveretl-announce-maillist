@@ -1,0 +1,59 @@
+From cloveretl-announce at lists.berlios.de  Wed Jul 25 10:22:32 2007
+From: cloveretl-announce at lists.berlios.de (cloveretl-announce at lists.berlios.de)
+Date: Wed, 25 Jul 2007 10:22:32 +0200
+Subject: [Cloveretl-announce] New CloverETL release 2.2
+Message-ID: <46A70848.2050407@centrum.cz>
+
+Dear CloverETL user !
+
+We are happy to announce that new version (2.2) of CloverETL tool has 
+been released.
+It may be downloaded from its web portal [www.cloveretl.org]. We would also
+like to remind you, that three other Clover related WEB sites are available:
+
+http://wiki.cloveretl.org/   - Wiki - primary source of Clover documentation
+http://forum.cloveretl.org/ - with Clover related discussion groups 
+(replacing the old ones on berlios.de site)
+http://bug.cloveretl.org/   - where you may report bugs or submit 
+feature requests
+
+These are the most important changes/improvements in 2.2 version of Clover:
+
++ all read/write components have an uniform set of available attributes
+    (i.e. dataPolicy, skipFirstLine, skipRows, numRecords, ...)
++ The examples package - example graphs are now distributed as an 'easy 
+to use' eclipse project
++ engine binary release has this slightly different directory structure
+    - [cloverETL]
+    - [bin] run scripts
+    - [docs] documentation, licenses
+    - [lib] clover engine and other dependent libraries
+    - [plugins] clover engine plugins
++ new shell/bat scripts for easy clover execution are present in the 
+[bin] directory
++ the documentation was moved to wiki page [wiki.cloveretl.org]
++ new implementation of Aggregate component
++ new range lookup table was added to the lookup engine plugin
++ the DBOutputTable component now supports new output port for 
+auto-generated keys from database;
+   only MySQL and Oracle databases are currently supported
++ new XML reader based on xPath XML technology was added - XPathReader
++ the clover engine plugin framework was extended by new extension point 
+for Transformation Language (TL) functions
+   - most of the TL functions were externalized to the new engine plugin 
+tlfunction
++ the field metadata has new attribute "auto_filling" - several 
+auto-filled fields are now recognized - (source_name, source_timestamp, 
+global_row_count, ...)
++ the clover transformation language increases usability - supports 
+sequences, lookup tables, lists, maps and introduces many new functions, 
+it also allows
+   inclusion of external source files through "import" keyword.
+
+
+Happy using !
+
+CloverETL team
+
+
+

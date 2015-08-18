@@ -1,0 +1,32 @@
+From cloveretl-announce at lists.berlios.de  Thu May 10 16:35:48 2007
+From: cloveretl-announce at lists.berlios.de (cloveretl-announce at lists.berlios.de)
+Date: Thu, 10 May 2007 16:35:48 +0200
+Subject: [Cloveretl-announce] CloverETL release 2.1.2
+Message-ID: <46432DC4.4050506@centrum.cz>
+
+Dear CloverETL user !
+
+We have just released CloverETL version 2.1.2 which fixes several 
+bugs/issues discovered
+recently.
+
+These are the most important changes this new version brings:
+
+Changes/bug fixes:
++ DBOutputTable component now properly recognizes empty cloverField parameter
++ DataGenerator component publics its parameter setters
++ support for sequences and lookup tables was added into clover transformation language
++ simple sequence now returns valid current value
+
+You may download the new release through following 
+link: http://developer.berlios.de/project/showfiles.php?group_id=618
+
+
+Best regards,
+
+David Pavlis
+CloverETL team
+
+
+
+

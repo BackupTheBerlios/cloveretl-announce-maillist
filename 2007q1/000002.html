@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Cloveretl-announce] CloverETL 2.1.0 released
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/cloveretl-announce/2007q1/index.html" >
+   <LINK REL="made" HREF="mailto:cloveretl-announce%40lists.berlios.de?Subject=Re%3A%20%5BCloveretl-announce%5D%20CloverETL%202.1.0%20released&In-Reply-To=%3C45D8249F.3080702%40centrum.cz%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000001.html">
+   <LINK REL="Next"  HREF="000003.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Cloveretl-announce] CloverETL 2.1.0 released</H1>
+    <B>cloveretl-announce at lists.berlios.de</B> 
+    <A HREF="mailto:cloveretl-announce%40lists.berlios.de?Subject=Re%3A%20%5BCloveretl-announce%5D%20CloverETL%202.1.0%20released&In-Reply-To=%3C45D8249F.3080702%40centrum.cz%3E"
+       TITLE="[Cloveretl-announce] CloverETL 2.1.0 released">cloveretl-announce at lists.berlios.de
+       </A><BR>
+    <I>Sun Feb 18 11:04:15 CET 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000001.html">[Cloveretl-announce] CloverETL release 2.0.4
+</A></li>
+        <LI>Next message: <A HREF="000003.html">[Cloveretl-announce] CloverETL - new - release 2.1.1 - wiki -	project repository
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2">[ date ]</a>
+              <a href="thread.html#2">[ thread ]</a>
+              <a href="subject.html#2">[ subject ]</a>
+              <a href="author.html#2">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear CloverETL user !
+
+CloverETL version 2.1.0 has arrived and brings many new features.
+
+This release brings updates to architecture of transformation 
+components.It allows checking of graph
+configuration before run-time.
+We have also added support for JMX which allows gathering of 
+system-level statistics about run time
+(component's CPU usage, various averages). These statistics can be 
+displayed by any JMX client.
+By reimplementing text data parsers, we achieved between 15-30% faster 
+processing (depends on type of data).
+
+Following is a list of significant changes:
+
++ Added new component &quot;Data Generator&quot; - generator of synthetic/random data
++ Added new component &quot;Lookup Table Reader/Writer&quot; - reader/writer of records from/to lookup table
++ Added new component &quot;Lookup Join&quot; - joins incoming data with selected lookup table
++ Added new component &quot;JMS Reader&quot; - receives JMS-messages
++ Added new component &quot;JMS Writer&quot; - sends JMS-messages
++ Added new component &quot;Normalizer&quot; - normalizes input records
++ Added new component &quot;Denormalizer&quot; - denormalizes input records
++ Added new component &quot;Structure writer&quot; - record mask formatter
++ Added new connection &quot;JMS connection&quot; - connection related with JSMReader and JMSWriter
++ developers can use new method for engine initialization - runGraph.initEngine()
++ new approach in DataField.setToDefaultValue() method;
+  in case the default value is not preset, engine tries to set the field value to null
++ DBConnection has new calling method order;
+  new DBConnection(), init(), getConnection()/getStatement(), free() 
+  (connect() method is now private - call init() method instead)
++ Extended LookupTable interface by put() and remove() methods
++ all GraphElement(s) should implement checkConfig() method; this method is used for
+  checking engine element configuration; related changes of transformation graph startup
+  are described in runGraph class comments
++ components (Node descendants) should not override direct run() method, instead 
+  for this purpose was introduced new execute() method
++ WatchDog thread has new wide logging and inter-component communication facilities
++ Added new data field type cbyte (compressed byte array)
++ All join components are ready to satisfy more slave input data streams
+
+
+The CloverETL download is available from usual location: www.cloveretl.org or cloveretl.berlios.de
+
+
+David Pavlis
+CloverETL team
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000001.html">[Cloveretl-announce] CloverETL release 2.0.4
+</A></li>
+	<LI>Next message: <A HREF="000003.html">[Cloveretl-announce] CloverETL - new - release 2.1.1 - wiki -	project repository
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2">[ date ]</a>
+              <a href="thread.html#2">[ thread ]</a>
+              <a href="subject.html#2">[ subject ]</a>
+              <a href="author.html#2">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/cloveretl-announce">More information about the Cloveretl-announce
+mailing list</a><br>
+</body></html>
